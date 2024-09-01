@@ -1,0 +1,37 @@
+                            /* border animation  */
+body{
+    background-color: black;
+}
+#box{
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    padding: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.in{
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+    position: relative;
+    z-index: 99;
+}
+#box::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    height: 800px;
+    width: 400px ;
+    background-color: red;
+    animation: move 1.5s infinite;
+    overflow: hidden;
+}
+@keyframes move {
+    100%{
+    transform: translate(-50%, -50%) rotate(225deg);
+
+    }
+}
